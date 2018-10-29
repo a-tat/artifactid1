@@ -7,8 +7,8 @@ import javax.crypto.spec.IvParameterSpec;
 import java.security.SecureRandom;
 
 
-public class CryptographicUtilities {
-
+public class SymmetricCryptographicUtilities {
+    // symmetric - AES standard implementation
     private static final String AES = "AES";
     private static final String AES_CIPHER_ALGORITHM = "AES/CBC/PKCS5Padding";
 
@@ -40,4 +40,5 @@ public class CryptographicUtilities {
         byte[] result = cipher.doFinal(cipherText);
         return new String(result);
     }
+
 }
